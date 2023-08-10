@@ -17,7 +17,6 @@ const router = createBrowserRouter([
   { path: "/report", element: <ReportAttendance /> },
   { path: "/employees", element: <Employees /> },
   { path: "/register/:token", element: <Register /> },
-
 ]);
 function App() {
   const token = localStorage.getItem("token");
@@ -32,11 +31,9 @@ function App() {
         dispatch(setValue(response.data));
       } catch (error) {
         localStorage.removeItem("token")
-        console.log(error);
       }
     };
     keepLogin();
-
   }, [dispatch, token]);
   return (
     <RouterProvider router={router} />

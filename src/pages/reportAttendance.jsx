@@ -78,14 +78,14 @@ export const ReportAttendance = () => {
                         </Tbody>
                     </Table>
                 </TableContainer>
-                {data2?.map((item) => {
-                    return (
-                        <Box bg={"#FFD06D"} borderRadius={"5px"} px={"10px"} w={"250px"} h={"70px"} mt={"20px"} border={"0px solid black"}>
-                            <Flex justifyContent={"space-between"}>
-                                <Text pt={"10px"} fontWeight={"bold"}>Potong Gaji</Text>
-                                <Text pt={"7px"} textAlign={"end"} fontSize={"10px"} color={"red"} fontStyle={"italic"}>*Potong Gaji <br />
-                                apabila tidak clock out</Text>
-                            </Flex>
+                <Box bg={"#FFD06D"} borderRadius={"5px"} px={"10px"} w={"250px"} pb={"10px"} mt={"20px"} border={"0px solid black"}>
+                    <Flex justifyContent={"space-between"}>
+                        <Text pt={"10px"} fontWeight={"bold"}>Potong Gaji</Text>
+                        <Text pt={"7px"} textAlign={"end"} fontSize={"10px"} color={"red"} fontStyle={"italic"}>*Potong Gaji <br />
+                            apabila tidak clock out</Text>
+                    </Flex>
+                    {data2?.map((item) => {
+                        return (
                             <Flex justifyContent={"space-between"}>
                                 <Text> Rp, {item.fee}</Text>
                                 <Text>{new Date(`${item.clockIn}`).toLocaleDateString("us-US", {
@@ -93,9 +93,9 @@ export const ReportAttendance = () => {
                                     day: "2-digit"
                                 })}</Text>
                             </Flex>
-                        </Box>
-                    )
-                })}
+                        );
+                    })}
+                </Box>
             </Box>
         </Flex>
     );

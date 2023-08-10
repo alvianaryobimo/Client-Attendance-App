@@ -1,14 +1,12 @@
-import { FormControl, FormErrorMessage, FormLabel, Input } from '@chakra-ui/react';
 import { useField } from 'formik';
+import { FormControl, FormErrorMessage, FormLabel, Input } from '@chakra-ui/react';
 
 export const DatePickerField = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props);
-
   const handleDateChange = (event) => {
     const { value } = event.target;
     helpers.setValue(value);
   };
-
   return (
     <FormControl isInvalid={meta.error && meta.touched}>
       <FormLabel>{label}</FormLabel>

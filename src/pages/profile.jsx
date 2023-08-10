@@ -31,7 +31,6 @@ export const Profile = () => {
                 description: "Your Profile Updated!",
                 status: 'success',
                 duration: 1000,
-                isClosable: true,
                 position: "top"
             });
             setTimeout(() => {
@@ -39,13 +38,11 @@ export const Profile = () => {
                 navigate("/home");
             }, 1000);
         } catch (err) {
-            console.log(err);
             toast({
                 title: "Failed to Change your Photo Profile!",
                 description: "File should be less than 1MB or File is not supported",
                 status: 'error',
                 duration: 3000,
-                isClosable: true,
                 position: "top"
             });
         }

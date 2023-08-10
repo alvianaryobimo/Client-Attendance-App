@@ -1,12 +1,9 @@
 import { Box, Button, Flex, Text, Textarea, useToast } from "@chakra-ui/react"
 import Axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
 
 export const Input = () => {
     const toast = useToast();
     const token = localStorage.getItem("token");
-    const [reload, setReload] = useState(true);
     const clockIn = async () => {
         try {
             await Axios.post("http://localhost:8000/attendance/clockin", {}, {
@@ -17,7 +14,6 @@ export const Input = () => {
                 description: "Have a nice day!",
                 status: 'success',
                 duration: 1000,
-                isClosable: true,
                 position: "top"
             });
             setTimeout(() => {
@@ -28,7 +24,6 @@ export const Input = () => {
                 title: 'You Have Clocked In!',
                 status: 'error',
                 duration: 1500,
-                isClosable: true,
                 position: "top"
             });
         }
@@ -43,7 +38,6 @@ export const Input = () => {
                 description: "See you Tomorrow!",
                 status: 'success',
                 duration: 1000,
-                isClosable: true,
                 position: "top"
             });
             setTimeout(() => {
@@ -54,12 +48,10 @@ export const Input = () => {
                 title: 'You Have Clocked Out!',
                 status: 'error',
                 duration: 1500,
-                isClosable: true,
                 position: "top"
             });
         }
     }
-
     return (
         <Box w={"400px"} mt={"15px"} h={"220px"} boxShadow={"0px 0px 5px grey"} borderRadius={"5px"} border={"0px solid black"}>
             <Flex borderBottom={"1px solid #FFBD59"} w={"full"} justifyContent={"center"}>

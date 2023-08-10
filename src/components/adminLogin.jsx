@@ -35,7 +35,6 @@ export const AdminLogin = () => {
                 description: "Login Success!",
                 status: 'success',
                 duration: 2500,
-                isClosable: true,
                 position: "top"
             });
         } catch (err) {
@@ -44,14 +43,13 @@ export const AdminLogin = () => {
                 description: err.response.data.error.message,
                 status: "error",
                 duration: 2500,
-                isClosable: true,
                 position: "top"
             });
         }
     }
     useEffect(() => {
         if (token) {
-            navigate("/home")
+            navigate("/home");
         }
     }, []);
     return (

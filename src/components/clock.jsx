@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 export const Clock = () => {
@@ -11,10 +11,8 @@ export const Clock = () => {
 
         return () => clearInterval(interval);
     }, []);
-
     const formattedTime = currentDateTime.toLocaleTimeString();
     const formattedDate = currentDateTime.toDateString();
-
     return (
         <Box>
             <Text fontFamily={"Times New Roman"} fontSize="2xl">Clock and Date</Text>

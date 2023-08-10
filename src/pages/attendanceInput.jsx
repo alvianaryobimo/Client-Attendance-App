@@ -19,7 +19,7 @@ export const AttendanceInput = () => {
             <Sidebar />
             <Box mt={"10px"} ml={"20px"}>
                 <Text fontFamily={"Times New Roman"} fontSize={"40px"} color={"#FFBD59"}>Time & Attendance</Text>
-                <Clock />       
+                <Clock />
                 <Input />
                 <ListAttendance />
             </Box>

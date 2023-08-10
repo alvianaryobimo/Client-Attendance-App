@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { Avatar, Flex, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Avatar, Flex, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export const ListEmployee = () => {
@@ -13,7 +13,7 @@ export const ListEmployee = () => {
         };
     };
     useEffect(() => {
-        getEmployee()
+        getEmployee();
     }, [])
     return (
         <TableContainer>

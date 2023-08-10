@@ -18,7 +18,6 @@ export const Sidebar = () => {
             colorScheme: "red",
             status: 'success',
             duration: 1500,
-            isClosable: true,
             position: "top"
         });
         setTimeout(() => {

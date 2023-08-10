@@ -35,7 +35,7 @@ export default function AddEmployee() {
     }));
     const handleCreate = async (value) => {
         try {
-            const response = await Axios.post("http://localhost:8000/auth", value, {
+            await Axios.post("http://localhost:8000/auth", value, {
                 headers: { Authorization: `Bearer ${token}` },
                 "content-Type": "Multiple/form-data"
             });
@@ -44,22 +44,15 @@ export default function AddEmployee() {
                 description: "Your Employee Data uploaded!",
                 status: 'success',
                 duration: 1500,
-                isClosable: true,
                 position: "top"
             });
-            // setTimeout(() => {
-            //     window.location.reload();
-            // }, 1000);
             navigate("/");
-            console.log(response);
         } catch (err) {
-            console.log(err);
             toast({
                 title: "Access Denied!",
                 description: err.response.data.error.message,
                 status: "error",
                 duration: 2500,
-                isClosable: true,
                 position: "top"
             });
         }
