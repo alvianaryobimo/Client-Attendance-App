@@ -39,9 +39,11 @@ export const Sidebar = () => {
                 <Flex as={Link} to={"/report"} mt={"20px"} justifyContent={"center"}>
                     <AiOutlineCalendar size={"30px"} color="white" />
                 </Flex>
-                <Flex as={Link} to={"/employees"} mt={"20px"} justifyContent={"center"}>
-                    <BiMessageSquareAdd size={"30px"} color="white" />
-                </Flex>
+                {data.isAdmin ?
+                    <Flex as={Link} to={"/employees"} mt={"20px"} justifyContent={"center"}>
+                        <BiMessageSquareAdd size={"30px"} color="white" />
+                    </Flex>
+                    : null}
             </Box>
             <Box>
                 <Flex mb={"10px"} justifyContent={"center"}>
