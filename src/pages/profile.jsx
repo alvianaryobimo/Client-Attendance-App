@@ -50,7 +50,7 @@ export const Profile = () => {
     return (
         <Flex>
             <Sidebar />
-            <Box mt={"15px"} ml={"20px"}>
+            <Box mt={"15px"} ml={["13px", '20px', "20px"]} mr={["7px", '0px', "0px"]}>
                 <Text fontFamily={"Times New Roman"} fontSize={"50px"} color={"#FFBD59"}>Profile</Text>
                 <Box mt={"10px"}>
                     <Avatar size={"xl"} src={`http://localhost:8000/imgProfile/${data.imgProfile}`} />

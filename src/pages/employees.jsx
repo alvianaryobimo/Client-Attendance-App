@@ -42,9 +42,9 @@ export const Employees = () => {
     return (
         <Flex>
             <Sidebar />
-            <Box ml={"20px"}>
+            <Box ml={["13px", '20px', "20px"]} mr={["7px", '20px', "20px"]}>
                 <Text fontFamily={"Times New Roman"} fontSize={"40px"} color={"#FFBD59"}>Employees List</Text>
-                <Box mt={"20px"} borderRadius={"10px"} border={"0px solid black"} w={"450px"} h={"148px"} boxShadow={"0px 0px 5px grey"}>
+                <Box mt={"20px"} borderRadius={"10px"} border={"0px solid black"} w={["210px",'300px', "400px"]} h={["170px","148px"]} boxShadow={"0px 0px 5px grey"}>
                     <FormLabel ml={"10px"} pt={"12px"}>Add Employee's Email for Register</FormLabel>
                     <Input variant={"flushed"}
                         value={email}
@@ -54,7 +54,7 @@ export const Employees = () => {
                                 sendEmail();
                             }
                         }}
-                        ml={"10px"} w={"400px"} placeholder="Email" />
+                        ml={"10px"} w={["180px",'270px', "370px"]} placeholder="Email" />
                     <Button type="submit" onClick={sendEmail} ml={"10px"} bg={"#FFBD59"} mt={"10px"}>Send</Button>
                 </Box>
                 <Flex mt={"10px"}>

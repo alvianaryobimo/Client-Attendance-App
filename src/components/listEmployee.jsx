@@ -16,7 +16,7 @@ export const ListEmployee = () => {
         getEmployee();
     }, [])
     return (
-        <TableContainer>
+        <TableContainer w={["210px", '500px', "800px","900px", "full"]}>
             <Table variant='striped' colorScheme="orange">
                 <Thead>
                     <Tr>

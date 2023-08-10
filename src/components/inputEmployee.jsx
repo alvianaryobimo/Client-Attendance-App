@@ -53,7 +53,7 @@ export const Input = () => {
         }
     }
     return (
-        <Box w={"400px"} mt={"15px"} h={"220px"} boxShadow={"0px 0px 5px grey"} borderRadius={"5px"} border={"0px solid black"}>
+        <Box w={["210px",'300px', "400px"]} mt={"15px"} h={"220px"} boxShadow={"0px 0px 5px grey"} borderRadius={"5px"} border={"0px solid black"}>
             <Flex borderBottom={"1px solid #FFBD59"} w={"full"} justifyContent={"center"}>
                 <Text margin={"5px"} fontFamily={"Times New Roman"} fontSize={"25px"}>Attendance</Text>
             </Flex>
@@ -64,7 +64,7 @@ export const Input = () => {
                 <Button onClick={clockIn} bg={"#FFBD59"} color={"white"}>
                     Clock In
                 </Button>
-                <Button onClick={clockOut} bg={"red"} color={"white"} ml={"10px"}>
+                <Button onClick={clockOut} bg={"red"} color={"white"} ml={["6px", '10px', "10px"]}>
                     Clock Out
                 </Button>
             </Flex>

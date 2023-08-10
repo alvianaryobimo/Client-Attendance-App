@@ -24,7 +24,7 @@ export const ListAttendance = () => {
     }, []);
     return (
         <>
-            <Box bgGradient="linear(#FFE5AD, #FFD06D)" w={"400px"} mt={"25px"} h={"150px"} borderRadius={"8px"} border={"0px solid black"}>
+            <Box bgGradient="linear(#FFE5AD, #FFD06D)" w={["210px",'300px', "400px"]}  mt={"25px"} h={"150px"} borderRadius={"8px"} border={"0px solid black"}>
                 <Text fontFamily={"Times New Roman"} display={"flex"} justifyContent={"center"} pt={"5px"} fontWeight={"bold"} fontSize={"20px"}>
                     Attendance Log
                 </Text>

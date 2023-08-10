@@ -17,7 +17,7 @@ export const AttendanceInput = () => {
     return (
         <Flex>
             <Sidebar />
-            <Box mt={"10px"} ml={"20px"}>
+            <Box mt={"10px"} ml={["13px", '20px', "20px"]} mr={["7px", '0px', "0px"]}>
                 <Text fontFamily={"Times New Roman"} fontSize={"40px"} color={"#FFBD59"}>Time & Attendance</Text>
                 <Clock />
                 <Input />

@@ -38,8 +38,8 @@ export const ReportAttendance = () => {
     return (
         <Flex>
             <Sidebar />
-            <Box ml={"20px"}>
-                <Text fontFamily={"Times New Roman"} fontSize={"50px"} color={"#FFBD59"}>Attendance Report</Text>
+            <Box ml={["13px", '20px', "20px"]} mr={["7px", '0px', "0px"]}>
+                <Text fontFamily={"Times New Roman"} fontSize={["30px","50px"]} color={"#FFBD59"}>Attendance Report</Text>
                 <Flex mt={"20px"}>
                     <Text><Avatar src={`http://localhost:8000/imgProfile/${redux.imgProfile}`} /></Text>
                     <Box mt={"2px"} ml={"5px"}>
@@ -47,7 +47,7 @@ export const ReportAttendance = () => {
                         <Text fontSize={"13px"}>{redux.email}</Text>
                     </Box>
                 </Flex>
-                <TableContainer>
+                <TableContainer w={["210px", "400px"]}>
                     <Table mt={"20px"} variant='striped' colorScheme="orange">
                         <Thead>
                             <Tr>
@@ -78,7 +78,7 @@ export const ReportAttendance = () => {
                         </Tbody>
                     </Table>
                 </TableContainer>
-                <Box bg={"#FFD06D"} borderRadius={"5px"} px={"10px"} w={"250px"} pb={"10px"} mt={"20px"} border={"0px solid black"}>
+                <Box bg={"#FFD06D"} borderRadius={"5px"} px={"10px"} w={["210px", "400px"]} pb={"10px"} mt={"20px"} border={"0px solid black"}>
                     <Flex justifyContent={"space-between"}>
                         <Text pt={"10px"} fontWeight={"bold"}>Potong Gaji</Text>
                         <Text pt={"7px"} textAlign={"end"} fontSize={"10px"} color={"red"} fontStyle={"italic"}>*Potong Gaji <br />
